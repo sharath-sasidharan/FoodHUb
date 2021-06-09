@@ -1,0 +1,467 @@
+html{
+scroll-behavior: smooth;
+}
+*{
+margin:0px;
+padding:0px;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+:root{
+--color-area:#c0392b;
+--color-text:#fff;
+}
+
+/*span{
+color: var(--color-area);
+font-size: 2em;
+}*/
+header{
+position: fixed;
+top:0;
+left:0;
+width: 100%;
+padding: 40px 100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100000;
+transition: 0.5s;
+}
+header.sticky{
+padding:10px 100px;
+background-color: var(--color-text);
+box-shadow: 0px 5px 20px rgba(0,0,0,0.05) ;
+}
+header .logo{
+color: var(--color-text);
+text-decoration: none;
+font-weight: 700;
+font-size: 2em;
+}
+
+
+header.sticky .logo{
+    color:#111;
+}
+
+.fa{
+    font-size: 1.5em;
+}
+
+header .navigation{
+position: relative;
+display:flex;
+}
+header .navigation li{
+list-style: none;
+margin-left:30px ;
+}
+header .navigation li a{
+/*position: relative;*/
+/*margin:0 15px;*/
+text-decoration:none;
+color: var(--color-text);
+letter-spacing: 2px;
+font-weight: 300px;
+transition: 0.6s;
+}
+header .navigation li a:hover{
+color: var(--color-area);
+}
+header.sticky .navigation li a{
+color:#111;
+font-weight: 700px;
+}
+header.sticky .navigation li a:hover{
+color: var(--color-area);
+}
+/*.span-logo{
+color: var(--color-area);
+}*/
+header .logo span{
+color: #c0392b;
+}
+.banner{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../images/food.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+width:100%;
+height:100vh;
+}
+.banner .content{
+max-width: 800px;
+text-align: center;
+}
+.banner .content h2{
+color: var(--color-text);
+font-size: 2rem;
+letter-spacing: 2px;
+}
+.banner .content p{
+color:#fff;
+margin:20px 0;
+font-size: 1em;
+letter-spacing: 1px;
+}
+.btn{
+/* border: 1px solid red; */
+text-decoration: none;
+padding:10px 20px;
+display: inline-block;
+background-color: transparent;
+color: var(--color-text);
+border-top-right-radius: 25px;
+border-bottom-left-radius:25px;
+transition: 0.6s;
+border:1px solid  var(--color-area);
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+.btn:hover{
+letter-spacing: 5px;
+color: var(--color-text);
+}
+.about-us{
+margin:100px 0;
+}
+.about-us h2{
+text-shadow: 4px 4px 4px #c0392b;
+}
+.about-para{
+text-align: justify;
+}
+.span-about{
+color: var(--color-area);
+font-size: 2em;
+}
+.abtimg{
+border-top-right-radius:25px;
+border-bottom-left-radius:25px;
+}
+.titles{
+width:100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.services{
+background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../images/service.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+width:100%;
+min-height:100vh;
+margin-bottom: 100px;
+}
+.white .titleText {
+color: var(--color-text);
+}
+.services .content{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+flex-direction: row;
+margin-top:30px;
+}
+.services .content .box{
+width:340px;
+margin:20px;
+padding:40px;
+background: var(--color-text);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.services .content .box .imgbox{
+position: relative;
+width:300px;
+height: 300px;
+margin-bottom: 20px;
+border-radius: 50%;
+overflow: hidden;
+}
+.services .content .box .imgbox img{
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit: cover;
+}
+.contact-us .container{
+/*border:10px solid yellow;*/
+}
+.contact-img{
+/*position: absolute;*/
+/*right: 4px;*/
+width:100%;
+/*border:1px solid red;*/
+margin-right: 1522px;
+}
+.contactForm{
+/* width:40%; */
+padding:40px;
+background: var(--color-text);
+/*border:1px solid green;*/
+}
+input{
+width:25%;
+transition: width 1.5s;
+}
+input:focus{
+width:350px;
+}
+textarea{
+width:25%;
+transition:width 1.5s;
+}
+textarea:focus{
+width:350px;
+}
+.contactForm  .inputBox{
+position: relative;
+/* width: 100%; */
+margin-top: 10px;
+}
+.contactForm  .inputBox input,
+.contactForm  .inputBox textarea{
+/* width: 100%; */
+padding: 5px 0;
+margin:10px 0;
+font-size: 16px;
+border:none;
+border-bottom: 2px solid  var(--color-area);
+outline: none;
+resize: none;
+}
+.contactForm  .inputBox span{
+position: absolute;
+left:0;
+padding: 5px 0;
+margin:10px 0;
+font-size: 16px;
+pointer-events: none;
+transition: 0.5s;
+color:#666;
+}
+.contactForm  .inputBox input:focus ~ span,
+.contactForm  .inputBox input:valid ~ span,
+.contactForm  .inputBox textarea:focus ~ span,
+.contactForm  .inputBox textarea:valid ~ span
+{
+color: var(--color-area);
+font-size: 12px;
+transform: translateY(-20px);
+}
+.contactForm  .inputBox input[type="submit"]
+{
+width: 100px;
+background: var(--color-area);
+color: var(--color-text);
+border:none;
+cursor: pointer;
+padding: 10px;
+font-size: 18px;
+}
+
+/* //SCROLL-TO-TOP */
+.scrollTop{
+/* border: 1px solid green; */
+position: fixed;
+bottom: 800px;
+right: 40px;
+width: 60px;
+height: 60px;
+background: url('../images/up-arrow.png');
+border-radius: 50%;
+background-size: 40px;
+background-position: center;
+background-repeat: no-repeat;
+cursor: pointer;
+z-index: 10000;
+visibility: hidden;
+opacity: 0;
+transition:0.5s;
+}
+
+/* //SCROLL-TO-TOP */
+.scrollTop.active{
+bottom:40px;
+visibility: visible;
+opacity: 1;
+}
+.footer{
+background: linear-gradient(to bottom right , #c0392b,rgb(219, 211, 211));
+color: black;
+padding:14px 0;
+text-align: center;
+letter-spacing: 2px;
+font-size: 18px;
+font-weight: 700px;
+}
+/*// ------------- Media Queries --------------- //*/
+@media (max-width: 991px) {
+header{
+/*border:1px solid red; */
+}
+header,
+header.sticky {
+padding: 10px 20px;
+}
+header .logo{
+/*border:1px solid green;*/
+margin-left: 150px;
+padding: 0 5px;
+}
+header.sticky .logo{
+color:#111;
+}
+
+/*// Hiding Menu Items */
+
+header .navigation {
+display: none;
+}
+
+/*// Displaying Menu Items on Toggle Method  [classList.toggle()]*/
+
+header .navigation.active {
+width: 100%;
+height: calc(100% - 68px);
+position: fixed;
+top: 68px;
+left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95));
+}
+header .navigation li {
+margin-left: 0;
+margin-bottom: 20px;
+}
+header .navigation li a {
+color: #fff !important;
+font-size: 1.7em;
+letter-spacing: 3px;
+text-transform: uppercase;
+}
+header .navigation li a:hover {
+/* text-decoration: underline; */
+transition: all 0.9s;
+letter-spacing: 4px;
+color: var(--color-area)!important;
+}
+
+/*// Hamburger-Menu*/
+.menu-toggle {
+position: relative;
+width: 40px;
+height: 40px;
+background: url('../images/menu.png');
+background-repeat: no-repeat;
+background-size: 30px;
+background-position: center;
+cursor: pointer;
+/*border:1px solid red;*/
+}
+
+
+/*// Activating Close Icon on Toggle()Method*/
+
+.menu-toggle.active {
+background: url('../images/close.png');
+background-repeat: no-repeat;
+background-size: 25px;
+background-position: center;
+cursor: pointer;
+z-index:1;
+}
+header.sticky .menu-toggle {
+filter: invert(1);
+}
+.banner .content {
+/*border:1px solid red;*/
+/* font-size:1.5em; */
+padding:0 15px;
+/*margin:0 0 151px 0;*/
+/* width:100%; */
+}
+.about-us{
+width:100%;
+/*border:1px solid red;*/
+}
+.about-us .abtimg{
+width:100%;
+margin-top:20px;
+border-radius: 25px;
+}
+
+
+
+
+.title-resp{
+/*border:2px solid red;*/
+width:100%;
+padding:20px;
+letter-spacing: 2px;
+font-size: 20px;
+text-align: center;
+}
+.box .text {
+/*border:2px solid red;*/
+background: #fff;
+box-shadow: 0 75px 50px rgba(0,0,0,0.1);
+color: var(--color-area);
+}
+.box .text:hover {
+color: var(--color-area);
+letter-spacing: 2px;
+
+}
+form h2{
+/*border:1px solid red;*/
+width:100%;
+font-size: 20px;
+font-weight: 700;
+/*letter-spacing: 2px;*/
+text-transform: capitalize;
+padding:0 14px;
+}
+.contact-us{
+/*border:1px solid red;*/
+}
+.contact-us .contactForm .inputBox{
+/*border:2px solid purple;*/
+margin:15px 0;
+}
+.contactForm  .inputBox input[type="submit"]{
+/*border:3px solid green;*/
+/*    margin-left: 85px;*/
+width: 100%;
+border-radius:25px;
+background: linear-gradient(to top right, #c0392b,rgb(219, 211, 211));
+letter-spacing: 2px;
+font-weight: 700;
+font-size: 18px;
+}
+.footer{
+width:100%;
+/*border:1px solid red;*/
+font-size:14px;
+letter-spacing:2px;
+text-transform: capitalize;
+}
+}
+@media  (max-width:768px){
+.contact-us .container{
+width:100%;
+}
+}

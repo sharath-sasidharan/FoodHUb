@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub</title>
+    <!-- //FAVICON  -->
+    <link rel="shortcut icon" type="image/png" href="favicon/fav.png">
+    <!-- // ANIMATE ON PAGE SCROLL -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- // FONT-AWESOME CDN LINK 4.7 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+    <!--  <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    
+    <!-- //GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+    <!-- // BOOTSTRAP LINKS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- EXTERNAL LINK -CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- // UP-ARROW ICON  USED WITH JS WHEN IT SCROLLY>500 -->
+    <div class="scrollTop" onclick="scrollToTop();"></div>
+    <!-- -->
+    <!-- STICKY NAVBAR INJECTED WITH JS :TARGETED HEADER > 0 -->
+    <header>
+      <a href="#" class="logo"><i class="fa fa-cutlery" aria-hidden="true"></i> <span> Food</span>Hub
+    </a>
+    <div class="menu-toggle" onclick="toggleMenu();"></div>
+    <ul class="navigation">
+      <li><a href="">Home</a></li>
+      <li><a href="#about"  onclick="toggleMenu();">About Us</a></li>
+      <li><a href="#service"  onclick="toggleMenu();">Services</a></li>
+      <li><a href="#contact"  onclick="toggleMenu();">Contact Us</a></li>
+    </ul>
+  </header>
+  <section class="banner">
+    <div class="content">
+      <h2>Nothing Brings People Together Like</h2>
+      <p>Everything we do is a celebration of seafood and Deserts to serving up new ways for you to enjoy it.</p>
+      <a href="" class="btn">Read More</a>
+    </div>
+  </section>
+  <section class="about-us" id="about" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6"  data-aos="fade-right">
+          <h2 class="text-center"><span class="span-about">A</span>bout Us</h2>
+          <p class="about-para"> ‘FoodHub’ Restaurants are well known with a substantial gathering of people including families, kids, seniors and business experts. Our benevolent condition is perfect for praising unique events, facilitating a business lunch or assembling for a flavorful dinner with loved ones. </p>
+        </div>
+        <div class="col-md-6">
+          
+          <img src="images/aboutus.jpg" width="550px" class="abtimg" alt="" data-aos="fade-left" data-aos-easing="ease-in-out">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="services" id="service">
+    <div class="titles white">
+      <h2 class="titleText"><span>C</span>atering</h2>
+      <p class="titleText title-resp">The only thing we're serious about is food.</p>
+    </div>
+    <div class="content">
+      <div class="box" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200">
+        <div class="imgbox">
+          <img src="images/salads.jpg" alt=""  >
+        </div>
+        <div class="text">
+          <h3>Fresh salads</h3>
+        </div>
+      </div>
+      
+      <div class="box"  data-aos="fade-down" data-aos-duration="1000" data-aos-offset="200">
+        <div class="imgbox">
+          <img src="images/seafood.jpg" alt="" >
+        </div>
+        <div class="text">
+          <h3>Sea food</h3>
+        </div>
+      </div>
+      
+      <div class="box" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200">
+        <div class="imgbox">
+          <img src="images/desert.jpg" alt="" >
+        </div>
+        <div class="text">
+          <h3>Vegan desserts</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact-us" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="contactForm">
+            
+            <form>
+              <h2><span>R</span>each Out to me</h2>
+              <div class="inputBox">
+                <input type="text" required="required">
+                <span>Name</span>
+              </div>
+              <div class="inputBox">
+                <input type="text" required="required">
+                <span>Email</span>
+              </div>
+              <div class="inputBox">
+                <textarea required="required"></textarea>
+                <span>Type Your Message...</span>
+              </div>
+              <div class="inputBox">
+                <input type="submit" value="Send" required="required">
+              </div>
+            </form>
+          </div>
+          
+        </div>
+        <div class="col-md-6">
+          <img src="images/contact.jpg" class="contact-img"  alt="" data-aos="fade-left" data-aos-duration="1000" >
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer">
+      <p>&copy;copyright 2021 | Designed by Sarath Sasidharan</p>
+    </div>
+  </footer>
+  <script src="js/index.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+  AOS.init({
+  offset: 285,
+  duration: 1000,
+  });
+  </script>
+</body>
+</html>
